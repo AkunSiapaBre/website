@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Judul Halaman</title>
+    <style>
+        body {
+            background-color: blue;
+            text-align: center;
+        }
+        h1 {
+            color: antiquewhite;
+            font-size: 28px;
+        }
+        p {
+            color: white;
+            font-size: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 3px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            color: yellow;
+        }
+        input-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        input-container label {
+            width: 200px;
+            text-align: right;
+            margin-right: 10px;
+            color: white;
+        }
+        input-container input {
+            width: 200px;
+        }
+        button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #hasil-luas {
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>DAFTAR KELAS TE</h1>
+    <p>contoh tabel dalam halaman HTML</p>
+
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Usia</th>
+            <th>Pekerjaan</th>
+        </tr>
+        <tr>
+            <td>Richo</td>
+            <td>20</td>
+            <td>Developer</td>
+        </tr>
+    </table>
+    <br>
+    <div class="input-container">
+        <label for="input-alas">Alas:</label>
+        <input type="number" id="input-alas">
+    </div>
+
+    <div class="input-container">
+        <label for="input-tinggi">Tinggi</label>
+        <input type="number" id="input-tinggi">
+    </div>
+
+    <div class="button-container">
+        <button onclick="HitungLuasSegitiga">Hitung</button>
+    </div>
+
+    <div id="hasil-luas">
+    </div>
+
+    <script>
+        function HitungLuasSegitiga() {
+            var alas = document.getElementById("input-alas").value;
+            var tinggi = document.getElementById("input-tinggi").value;
+
+
+            var luas = 0.5 *alas *tinggi;
+            document.getElementById("hasil-luas").innerHTML = "Luas Segitiga: " + luas;
+        }
+    </script>
+    
+</body>
+</html>
